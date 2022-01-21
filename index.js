@@ -1,7 +1,7 @@
 const DiscordJS = require('discord.js')
 const WOKCommands = require('wokcommands')
 const path = require('path')
-//const token = require('./token.json')
+const token = require('./token.json')
 const mongo = require('./mongo.json')
 const { config } = require('process')
 
@@ -57,7 +57,7 @@ client.on('ready', () => {
         
         // User your own ID
         // If you only have 1 ID then you can pass in a string instead
-        botOwners: ['616926646657744898'],
+        botOwners: ['616926646657744898', '619654859364499471'],
         
         // What built-in commands should be disabled.
         // Note that you can overwrite a command as well by using
@@ -91,5 +91,5 @@ client.on('ready', () => {
         .setColor(0xff0000)
 })
 
-//client.login(token.token)
-client.login(process.env.DJS_TOKEN)
+client.login(token.token)
+//client.login(process.env.DJS_TOKEN)

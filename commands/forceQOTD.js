@@ -24,13 +24,13 @@ module.exports = {
         questions.findOne({}, {}, { sort: { 'created_at' : 1 } }, function(err, question) {
 
         const user = (questions.userId)
-        var approvalChannel = client.channels.cache.get('909172575266037840')
+        var approvalChannel = client.channels.cache.get('934185651602071633')
         const approvalEmbed = new Discord.MessageEmbed()
         .setDescription(`**Question of The Day Approval**\n\n **${question.question}**\n Submitted by <@${question.userId}>\n\nPlease react below to approve this question!`)
         .setFooter('QOTD Bot, brought to you by Ruairiw8')
         .setTimestamp()
         .setColor('PURPLE')
-        const qotdChannel = client.channels.cache.get('926530900576063568')
+        const qotdChannel = client.channels.cache.get('932750280121016371')
     
         message.channel.send({ embeds: [approvalEmbed], components: [row] })
 
